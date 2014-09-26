@@ -1,4 +1,6 @@
 Stupify.io
 ==========
 
-(initially) Test Environment for Stupify
+Test Environment for Stupify
+
+Private repo at https://bitbucket.org/ajethorn/stupify

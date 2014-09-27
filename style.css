@@ -1,0 +1,86 @@
+body{
+	padding: 0px;
+	margin: 0px;
+	background-color: #1abc9c;
+}
+#header{
+	margin: 0px;
+	padding: 10px;
+	background-color: #2980b9;
+	color: white;
+}
+#inner{
+	padding-top: 25px;
+}
+#inner{
+	/*padding-top: 20px;
+	padding-left: 20px;*/
+	padding: 5px 20px 0px 20px;
+}
+#topSpan{
+	padding: 5px 20px 20px 20px;
+	color: white;
+	font-size: 25px;
+}
+.top{
+
+}
+.bottom a{
+	
+}
+#bottomSpan{
+	padding: 5px 20px 20px 20px;
+
+	font-size: 12px;
+}
+#textareas{
+	padding: 5px 20px 20px 20px;
+}
+#sourceHeader{
+	float: left;
+}
+#source{
+	font-size: 22px;
+	display: block;
+	padding: 0px;
+	width: 49%;
+	height: 130px;
+	float: left;
+	overflow-y: hidden; 
+	overflow-x: auto; 
+	padding-right: 10px; 
+	resize: none;
+	background-color: #ecf0f1;
+}
+#result{
+	font-size: 22px;
+	background-color: #bdc3c7;
+	display: block;
+	padding: 0px;
+	width: 49%;
+	height: 130px;
+	float: right;
+	overflow-y: hidden; 
+	overflow-x: auto; 
+	padding-right: 10px; 
+	resize: none;
+}
+#stupifyButton{
+	padding: 12px;
+	background-color: #2c3e50;
+    -moz-border-radius: 5px;
+    -webkit-border-radius: 5px;
+    border-radius: 6px;
+    color: #fff;
+    font-family: 'Oswald';
+    font-size: 100px;
+    text-decoration: none;
+    cursor: pointer;
+    border:none;
+    margin: 0 auto;
+    display: block;
+    opacity: .7;
+}
+#stupifyButton:hover{
+	opacity: 1;
+}

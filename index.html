@@ -6,6 +6,22 @@
 		<link rel="stylesheet" href="style.css">
 	</head>
 	<body>
-		Stupify Test Environment
+		<div id="header"> Stupify Test Environment</div>
+		<div id="inner">
+			<div class="top">
+				<span id="topSpan">Enter Text to Stupify:</span>
+			</div>
+				<div id="textareas">
+					<textarea id="source" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="source-textarea"></textarea>
+					<textarea id="result" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="result-textarea"></textarea>
+				</div>
+				<div class="bottom">
+					<span id="bottomSpan">Type text or <a id="documentUpload">upload a document.</a></span>
+				</div>
+				<div id="bottomButtonField">
+					<button type="button" id="stupifyButton">Stupify</button>
+				</div>
+			</div>
+		</div>
 	</body>
 <html>

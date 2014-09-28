@@ -184,8 +184,8 @@ function increaseVelocity(){
 	console.log(circles);
 	for (var i = 0; i < circles.length; i++){
 		circles[i].v = [
-    		(Math.random()-0.5)*(1.1),
-    		(Math.random()-0.5)*(1.1)
+    		(Math.random()-0.5)*(2.1),
+    		(Math.random()-0.5)*(2.1)
   		];
 	}
 }

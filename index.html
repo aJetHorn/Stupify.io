@@ -4,22 +4,26 @@
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="app.js"></script>
 		<link rel="stylesheet" href="style.css">
+		<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
 	</head>
 	<body>
-		<div id="header"> Stupify Test Environment</div>
-		<div id="inner">
-			<div class="top">
-				<span id="topSpan">Enter Text to Stupify:</span>
-			</div>
-				<div id="textareas">
-					<textarea id="source" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="source-textarea"></textarea>
-					<textarea id="result" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="result-textarea"></textarea>
+		<div id="wrapper">
+			<canvas id="canvas"></canvas>
+			<div id="header"> Stupify<span style="font-size: .5em;">.io </style></div>
+			<div id="inner">
+				<div class="top">
+					<span id="topSpan">Enter Text to Stupify:</span>
 				</div>
-				<div class="bottom">
-					<span id="bottomSpan">Type text or <a id="documentUpload">upload a document.</a></span>
-				</div>
-				<div id="bottomButtonField">
-					<button type="button" id="stupifyButton">Stupify</button>
+					<div id="textareas">
+						<textarea id="source" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="source-textarea" placeholder="If you're reading this, this is a non-functioning version"></textarea>
+						<textarea id="result" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="result-textarea" disabled></textarea>
+					</div>
+					<div class="bottom">
+						<span id="bottomSpan">Type text or <a id="documentUpload">upload a document.</a></span>
+					</div>
+					<div id="bottomButtonField">
+						<button type="button" id="stupifyButton">Stupify</button>
+					</div>
 				</div>
 			</div>
 		</div>

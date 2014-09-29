@@ -1,7 +1,7 @@
 body{
 	padding: 0px;
 	margin: 0px;
-	background-color: #333;
+	background-color: #34495e;
 	min-width: 900px;
 }
 #wrapper{
@@ -14,7 +14,7 @@ body{
 	margin: 0px;
 	padding: 0px;
 	background-color: transparent;
-	color: white;
+	color: #ecf0f1;
 	position: absolute;
 	z-index: 1000;
 	/*min-width: 1200px;*/
@@ -27,6 +27,11 @@ body{
 #headerTitle{
 	padding: 10px;
 	/*width: 100%;*/
+}
+input:focus,
+select:focus,
+button:focus {
+    outline: none;
 }
 #inner{
 	padding: 0px;
@@ -61,13 +66,20 @@ body{
 #sourceHeader{
 	float: left;
 }
+#leftSide{
+	float: left;
+	width: 49%;
+}
+#rightSide{
+	float: right;
+	width: 49%;
+}
 #source{
 	font-size: 22px;
 	display: block;
 	padding: 0px;
-	width: 49%;
+	width: 100%;
 	height: 130px;
-	float: left;
 	overflow-y: hidden; 
 	overflow-x: auto; 
 	padding-right: 10px; 
@@ -84,16 +96,32 @@ body{
 	background-color: #bdc3c7;
 	display: block;
 	padding: 0px;
-	width: 49%;
+	width: 100%;
 	height: 130px;
-	float: right;
 	overflow-y: hidden; 
 	overflow-x: auto; 
 	padding-right: 10px; 
 	resize: none;
 }
+#leftTitle,
+#rightTitle,
+#leftFooter,
+#rightFooter{
+	color: #ecf0f1;
+}
+
+/*#leftTitle,
+#rightTitle{
+	height: 40px;
+}*/
+
+#leftTitle,
+#rightTitle{
+	font-size: 2em;
+}
 #bottomButtonField{
-	margin-top: 15px;
+	display: block;
+	margin-top: 200px;
 }
 #stupifyButton{
 	padding: 12px;
@@ -117,7 +145,7 @@ body{
 }
 
 canvas {
-	/*#333*/
+	/*#333 #34495e*/
   filter: blur(3px);
   -webkit-filter: blur(3px);
   min-width: 900px;

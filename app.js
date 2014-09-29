@@ -57,7 +57,7 @@ var circles;
 var tick = 0;
 var numCircles = 165;
 var velo = 0;
-var colors = ['#bdc3c7','#1abc9c','#f1c40f', '#2ecc71', '#8e44ad', '#e74c3c'];
+var colors = ['#bdc3c7','#1abc9c','#f1c40f', '#2ecc71', '#8e44ad', '#e74c3c', '#2c3e50'];
 //white, turquoise, sunflower
 /*'#f1c40f'*/ //#2c3e50 #f1c40f #2980b9 #1abc9c #1abc9c #9b59b6 #95a5a6 #bdc3c7 #ecf0f1
 var colorIndex = 0;
@@ -119,8 +119,9 @@ window.onload = function() {
 
 var Circle = function(x, y) {
   //r = (1.9*Math.random())+1.3;
+  //this.r = (4*Math.random())+.8;
   this.pos = [ x, y ];
-  this.r = (4*Math.random())+.8;
+  this.r = (10*Math.random())+.8;
   this.c = colors[colorIndex];
   this.v = [
     (Math.random()-0.5)*(.04 + velo),
@@ -188,6 +189,7 @@ function renderHighVelocity(){
 };
 
 function increaseVelocity(){
+  //*60, *60
 	console.log(circles);
 	for (var i = 0; i < circles.length; i++){
     var xVelo = circles[i].v[0];

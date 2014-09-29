@@ -10,9 +10,10 @@ body{
 	min-width: 900px;
 }
 #header{
+	/*background-color: #34495e;*/
 	margin: 0px;
 	padding: 0px;
-	background-color: #34495e;
+	background-color: transparent;
 	color: white;
 	position: absolute;
 	z-index: 1000;
@@ -20,7 +21,7 @@ body{
 	width: 100%;
 	font-family: 'Lato', sans-serif;
     font-weight: 100; 
-    font-size: 4em;
+    font-size: 4.5em;
     opacity: .8;
 }
 #headerTitle{
@@ -116,8 +117,9 @@ body{
 }
 
 canvas {
-  filter: blur(2px);
-  -webkit-filter: blur(2px);
+	/*#333*/
+  filter: blur(3px);
+  -webkit-filter: blur(3px);
   min-width: 900px;
   height: 100%;
   width: 100%;
@@ -125,7 +127,7 @@ canvas {
   left: 0px;
   margin: 0;
   padding: 0;
-  background: #333;
+  background: #34495e;
   position: absolute;
   z-index: 1;
 }

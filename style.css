@@ -116,8 +116,8 @@ body{
 }
 
 canvas {
-  filter: blur(1px);
-  -webkit-filter: blur(1px);
+  filter: blur(2px);
+  -webkit-filter: blur(2px);
   min-width: 900px;
   height: 100%;
   width: 100%;

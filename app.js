@@ -6,19 +6,19 @@ $(document).ready( function ()
   	rawText = $("#source").val().trim();
   	tokens = rawText.split(" ");
     
-    console.log(rawText);
-    console.log(tokens);
+    //console.log(rawText);
+    //console.log(tokens);
     
     //renderHighVelocity();
     increaseVelocity();
     addColors();
     setTimeout(function() {
       slowVelocityEase();
+            resetColors();
     setTimeout(function() {
       slowVelocityEase();
       setTimeout(function() {
       slowVelocity();
-      resetColors();
       highlightResultText();
       postResultTokens();
       }, 100);
@@ -55,7 +55,7 @@ var canvas;
 var ctx;
 var circles;
 var tick = 0;
-var numCircles = 150;
+var numCircles = 165;
 var velo = 0;
 var colors = ['#bdc3c7','#1abc9c','#f1c40f', '#2ecc71', '#8e44ad', '#e74c3c'];
 //white, turquoise, sunflower
@@ -118,8 +118,9 @@ window.onload = function() {
 };
 
 var Circle = function(x, y) {
+  //r = (1.9*Math.random())+1.3;
   this.pos = [ x, y ];
-  this.r = (1.9*Math.random())+1.3;
+  this.r = (4*Math.random())+.8;
   this.c = colors[colorIndex];
   this.v = [
     (Math.random()-0.5)*(.04 + velo),
@@ -203,7 +204,7 @@ function increaseVelocity(){
 
 function addColors(){
 	for (var i = 0; i < circles.length; i++){
-		colorIndex = Math.random()*colors.length | 0;
+		colorIndex = ((Math.random()*(colors.length-1)) + 1) | 0;
 		circles[i].c = colors[colorIndex];
 	}
 }
@@ -212,8 +213,8 @@ function slowVelocity(){
 	for (var i = 0; i < circles.length; i++){
     var xVelo = circles[i].v[0];
     var yVelo = circles[i].v[1];
-    console.log("current velocities");
-    console.log(xVelo + yVelo);
+    // console.log("current velocities");
+    // console.log(xVelo + yVelo);
     //change velocity, preserve direction
 		circles[i].v = [
         xVelo * .07,
@@ -225,8 +226,8 @@ function slowVelocityEase(){
   for (var i = 0; i < circles.length; i++){
     var xVelo = circles[i].v[0];
     var yVelo = circles[i].v[1];
-    console.log("current velocities");
-    console.log(xVelo + yVelo);
+    // console.log("current velocities");
+    // console.log(xVelo + yVelo);
     //change velocity, preserve direction
     circles[i].v = [
         xVelo * .5,
@@ -237,10 +238,26 @@ function slowVelocityEase(){
 
 function resetColors(){
 	resetColorIndex();
+  var color = colors[colorIndex];
+  //console.log("color index is.. " + colorIndex + " " + color);
 	for (var i = 0; i < circles.length; i++){
-		circles[i].c = colors[colorIndex];
+    //console.log(circles[i]);
+		circles[i].c = color;
+    // $(circles).animate({
+    //   c: color
+    // }, 600, function(){
+    // });
+          //console.log(circles[i].c);
 	}
 }
+
+// //$( "#book" ).animate({
+//     opacity: 0.25,
+//     left: "+=50",
+//     height: "toggle"
+//   }, 5000, function() {
+//     // Animation complete.
+//   });
 
 function resetColorIndex(){
 	colorIndex = 0;

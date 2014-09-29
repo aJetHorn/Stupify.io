@@ -13,11 +13,17 @@ $(document).ready( function ()
     increaseVelocity();
     addColors();
     setTimeout(function() {
+      slowVelocityEase();
+    setTimeout(function() {
+      slowVelocityEase();
+      setTimeout(function() {
       slowVelocity();
       resetColors();
       highlightResultText();
       postResultTokens();
-     }, 3500);
+      }, 100);
+     }, 100);
+    }, 3300);
   });
 
   function highlightResultText(){
@@ -183,9 +189,14 @@ function renderHighVelocity(){
 function increaseVelocity(){
 	console.log(circles);
 	for (var i = 0; i < circles.length; i++){
+    var xVelo = circles[i].v[0];
+    var yVelo = circles[i].v[1];
+    //increase velocity, preserve direction
 		circles[i].v = [
-    		(Math.random()-0.5)*(2.1),
-    		(Math.random()-0.5)*(2.1)
+        xVelo * 60,
+        yVelo * 60
+    		// (Math.random()-0.5)*(2.1),
+    		// (Math.random()-0.5)*(2.1)
   		];
 	}
 }
@@ -199,11 +210,29 @@ function addColors(){
 
 function slowVelocity(){
 	for (var i = 0; i < circles.length; i++){
+    var xVelo = circles[i].v[0];
+    var yVelo = circles[i].v[1];
+    console.log("current velocities");
+    console.log(xVelo + yVelo);
+    //change velocity, preserve direction
 		circles[i].v = [
-    		(Math.random()-0.5)*(.04),
-    		(Math.random()-0.5)*(.04)
+        xVelo * .07,
+        yVelo * .07
   		];
 	}
+}
+function slowVelocityEase(){
+  for (var i = 0; i < circles.length; i++){
+    var xVelo = circles[i].v[0];
+    var yVelo = circles[i].v[1];
+    console.log("current velocities");
+    console.log(xVelo + yVelo);
+    //change velocity, preserve direction
+    circles[i].v = [
+        xVelo * .5,
+        yVelo * .5
+      ];
+  }
 }
 
 function resetColors(){

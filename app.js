@@ -2,6 +2,8 @@ $(document).ready( function ()
 {
 	var rawText;
 	var tokens;
+  var running = false;
+
   $( "#stupifyButton" ).on( "click",   function() { //freely interact with displays
   	rawText = $("#source").val().trim();
   	tokens = rawText.split(" ");
@@ -10,7 +12,9 @@ $(document).ready( function ()
     //console.log(tokens);
     
     //renderHighVelocity();
-    increaseVelocity();
+    if (!running){
+      running = true;
+      increaseVelocity();
     addColors();
     setTimeout(function() {
       slowVelocityEase();
@@ -21,9 +25,11 @@ $(document).ready( function ()
       slowVelocity();
       highlightResultText();
       postResultTokens();
+      running = false;
       }, 100);
      }, 100);
     }, 3300);
+    }   
   });
 
   function highlightResultText(){

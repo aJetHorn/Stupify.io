@@ -25,3 +25,5 @@ Resources:
 * http://www.quora.com/Is-there-an-online-synonym-API
 
 * https://launchpad.net/otherwords
+
+* https://datamarket.azure.com/dataset/bing/synonyms

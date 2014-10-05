@@ -1,17 +1,21 @@
 $(document).ready( function () 
 {
-	var rawText;
+	
+
 	var tokens;
   var running = false;
+
+
+
+
+
+
+  //---------------------------------jQuery Code Below---------------------------------------
 
   $( "#stupifyButton" ).on( "click",   function() { //freely interact with displays
   	rawText = $("#source").val().trim();
   	tokens = rawText.split(" ");
     
-    //console.log(rawText);
-    //console.log(tokens);
-    
-    //renderHighVelocity();
     if (!running){
       running = true;
       increaseVelocity();
@@ -195,17 +199,12 @@ function renderHighVelocity(){
 };
 
 function increaseVelocity(){
-  //*60, *60
-	console.log(circles);
 	for (var i = 0; i < circles.length; i++){
     var xVelo = circles[i].v[0];
     var yVelo = circles[i].v[1];
-    //increase velocity, preserve direction
 		circles[i].v = [
         xVelo * 60,
         yVelo * 60
-    		// (Math.random()-0.5)*(2.1),
-    		// (Math.random()-0.5)*(2.1)
   		];
 	}
 }
@@ -221,9 +220,6 @@ function slowVelocity(){
 	for (var i = 0; i < circles.length; i++){
     var xVelo = circles[i].v[0];
     var yVelo = circles[i].v[1];
-    // console.log("current velocities");
-    // console.log(xVelo + yVelo);
-    //change velocity, preserve direction
 		circles[i].v = [
         xVelo * .07,
         yVelo * .07
@@ -234,9 +230,6 @@ function slowVelocityEase(){
   for (var i = 0; i < circles.length; i++){
     var xVelo = circles[i].v[0];
     var yVelo = circles[i].v[1];
-    // console.log("current velocities");
-    // console.log(xVelo + yVelo);
-    //change velocity, preserve direction
     circles[i].v = [
         xVelo * .5,
         yVelo * .5
@@ -247,25 +240,10 @@ function slowVelocityEase(){
 function resetColors(){
 	resetColorIndex();
   var color = colors[colorIndex];
-  //console.log("color index is.. " + colorIndex + " " + color);
 	for (var i = 0; i < circles.length; i++){
-    //console.log(circles[i]);
 		circles[i].c = color;
-    // $(circles).animate({
-    //   c: color
-    // }, 600, function(){
-    // });
-          //console.log(circles[i].c);
 	}
 }
-
-// //$( "#book" ).animate({
-//     opacity: 0.25,
-//     left: "+=50",
-//     height: "toggle"
-//   }, 5000, function() {
-//     // Animation complete.
-//   });
 
 function resetColorIndex(){
 	colorIndex = 0;

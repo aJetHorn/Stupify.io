@@ -2,12 +2,9 @@ $(document).ready( function ()
 {
 	
 
+
 	var tokens;
   var running = false;
-
-
-
-
 
 
   //---------------------------------jQuery Code Below---------------------------------------

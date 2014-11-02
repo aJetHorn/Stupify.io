@@ -1,6 +1,6 @@
 $(document).ready( function () 
 {
-	
+	filepicker.setKey("AW67HKsOrQ5qGHJkLGjAnz");
 
 
 	var tokens;
@@ -31,6 +31,23 @@ $(document).ready( function ()
      }, 100);
     }, 3300);
     }   
+  });
+
+  $("#documentUpload").on("click", function(){
+    filepicker.pick(
+       {
+     mimetypes: ['text/plain'],
+       },
+      function(Blob){
+        $.ajax({
+           url : Blob.url,
+           dataType: "text",
+           success : function (data) {
+               $("#source").text(data);
+           }
+         });
+      }
+    );
   });
 
   function highlightResultText(){

@@ -70,6 +70,12 @@ button:focus {
 	float: left;
 	width: 49%;
 }
+#documentUpload, #documentExport, #viewMetrics{
+	cursor: pointer;
+}
+#documentUpload:hover, #documentExport:hover, #viewMetrics:hover{
+	opacity: .8;
+}
 #rightSide{
 	float: right;
 	width: 49%;

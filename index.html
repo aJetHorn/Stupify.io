@@ -3,8 +3,10 @@
 		<title>Stupify.io</title>
 		<script src="//code.jquery.com/jquery-1.11.0.min.js"></script>
 		<script src="app.js"></script>
+		<script type="text/javascript" src="//api.filepicker.io/v1/filepicker.js"></script>
 		<link rel="stylesheet" href="style.css">
 		<link href='http://fonts.googleapis.com/css?family=Lato:100,400' rel='stylesheet' type='text/css'>
+
 	</head>
 	<body>
 		<div id="wrapper">
@@ -14,14 +16,14 @@
 					<div id="textareas">
 						<div id ="leftSide">
 							<span id="leftTitle">Enter Text to Stupify: </span>
-							<textarea id="source" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="source-textarea" placeholder="If you're reading this, this is a non-functioning version"></textarea>
-							<span id="leftFooter">Type text or <a id="documentUpload">upload a document</a></span>
+							<textarea id="source" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="source-textarea" placeholder="The quick brown fox jumps over the lazy dog"></textarea>
+							<span id="leftFooter">Type text or <span id="documentUpload">upload a document</span></span>
 
 						</div>
 						<div id = "rightSide">
 							<span id="rightTitle">_</span>
 							<textarea id="result" name="text" wrap="SOFT" tabindex="0" dir="ltr" spellcheck="false" autocapitalize="off" autocomplete="off" autocorrect="off" autofocus class="result-textarea" disabled></textarea>
-							<span id="rightFooter">Export | View Metrics</span>
+							<span id="rightFooter"><span id="documentExport">Export</span> | <span id="viewMetrics">View Metrics </span></span>
 						</div>
 					</div>
 					<div id="bottomButtonField">

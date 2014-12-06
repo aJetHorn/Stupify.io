@@ -73,6 +73,46 @@ $(document).ready( function ()
   }
 });
 
+//Tokenizer code by Frank
+var ADJECTIVE = "ADJECTIVE", VERB = "VERB", NOUN = "NOUN", ADVERB = "ADVERB",
+CONJUNCTION = "CONJUNCTION", COMMA = "COMMA", PERIOD = "PERIOD", SEMICOLON = "SEMICOLON",
+COLON = "COLON", QUESTION = "QUESTION", EXCLAMATION = "EXCLAMATION", EOI = "EOI",
+INVALID = "INVALID"; //token  types
+
+var type;
+var val;
+function Tokenizer(type, val) {
+  this.type = type;
+  this.val = val;
+}
+
+Tokenizer.getType = function() {
+  return type;
+}
+
+Tokenizer.getVal = function() {
+  return val;
+}
+
+Tokenizer.print = function() {
+  var s = "";
+  switch(type) {
+    case "ADJECTIVE": s = ADJECTIVE; break;
+    case "VERB": s = VERB; break;
+    case "NOUN": s = NOUN; break;
+    case "ADVERB": s = ADVERB; break;
+    case "CONJUNCTION": s = CONJUNCTION; break;
+    case "COMMA": s = ","; break;
+    case "PERIOD": s = "."; break;
+    case "SEMICOLON": s = ";"; break;
+    case "COLON": s = ":"; break;
+    case "QUESTION": s = "?"; break;
+    case "EXCLAMATION": s = "!"; break;
+    case "EOI": s = EOI; break;
+    case "INVALID": s = INVALID; break;
+  }
+  console.log(s);
+}
 
 
 var canvas;
